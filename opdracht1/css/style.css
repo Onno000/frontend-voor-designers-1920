@@ -1,16 +1,88 @@
-html{
-  box-sizing: border-box; /* https://css-tricks.com/box-sizing/ */
-  background:#eee;
-  background: url("../img/flagF4D.png") center no-repeat;
+html {
+  box-sizing: border-box;
+  background: #121212;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-body{
-  max-width: 30em;
+
+body {
   margin: 1em auto;
   padding: 1em;
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0.5em 0.5em 0.5em rgba(68,68,68,0.6);
+}
+
+main header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+main header button {
+  background-color: #242424;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  font-size: 12pt;
+}
+
+main header button:hover {
+  background-color: darkgreen;
+}
+
+main article {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+main article div {
+  margin: 1em;
+  height: 200px;
+  width: 200px;
+}
+
+.toevoegen {
+  display: none;
+}
+
+.kleurbutton {
+  background-color: green;
+}
+
+main article div:nth-child(1) {
+  border: 5px solid red;
+}
+
+main article div:nth-child(2) {
+  border: 5px solid blue;
+}
+
+main article div:nth-child(3) {
+  border: 5px solid white;
+}
+
+main article div:nth-child(4) {
+  border: 5px solid yellow;
+}
+
+main article div:nth-child(5) {
+  border: 5px solid yellow;
+}
+
+main article div:nth-child(6) {
+  border: 5px solid red;
+}
+
+main article div:nth-child(7) {
+  border: 5px solid blue;
+}
+
+main article div:nth-child(8) {
+  border: 5px solid white;
 }

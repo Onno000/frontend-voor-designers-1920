@@ -34,3 +34,53 @@ Voor wat complexere micro-interacties waar verschillende states elkaar moeten op
 
 - eventlistener: [transitionend](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionend_event)
 - eventlistener: [animationend](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event)
+
+
+
+
+
+
+
+
+## Feedback over werk van week 1
+
+### 1. De uitwerking van je ontwerp 
+
+Je kan klikken in de browser en er verschijnen foto's. Alle kleuren zijn uitgewerkt.
+
+### 2. De principles of user interface design toepassen 
+
+Titel erbij zodat de gebruiker weet wat hij/zij op deze pagina kan doen.
+
+### 3. Het ontwerp is getest en verbetert
+
+Prima
+
+
+## Feedback over werk van week 2
+
+### 1. De uitwerking van je ontwerp 
+
+...
+
+### 2. De principles of user interface design toepassen 
+
+...
+
+### 3. Het ontwerp is getest en verbetert
+
+...
+
+## Feedback over werk van week 3
+
+### 1. De uitwerking van je ontwerp 
+
+...
+
+### 2. De principles of user interface design toepassen 
+
+...
+
+### 3. Het ontwerp is getest en verbetert
+
+...
