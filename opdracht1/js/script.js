@@ -29,152 +29,80 @@ var i;
 
 // Hier schrijf ik functies om een classList toe te voegen, deze worden met een loop toegevoegd zodat zij allemaal worden getoond.
 
-function alles() {
-  //   rood();
-  //   geel();
-  //   zwartWit();
-  //   blauw();
-  //   buttonAlles.classList.toggle("kleurbutton");
-
-  clear();
-}
-
-function clear() {
-  //rood
+function herstel() {
   for (i = 0; i < rodePlaatjes.length; i++) {
-    rodePlaatjes[i].classList.add("toevoegen");
+    rodePlaatjes[i].classList.remove("verwijderen");
+    buttonRood.classList.add("roodbutton");
   }
-  //rood
   for (i = 0; i < gelePlaatjes.length; i++) {
-    gelePlaatjes[i].classList.add("toevoegen");
+    gelePlaatjes[i].classList.remove("verwijderen");
+    buttonGeel.classList.add("geelbutton");
   }
-  //rood
   for (i = 0; i < blauwePlaatjes.length; i++) {
-    blauwePlaatjes[i].classList.add("toevoegen");
+    blauwePlaatjes[i].classList.remove("verwijderen");
+    buttonBlauw.classList.add("blauwbutton");
   }
-  //rood
   for (i = 0; i < zwartWitPlaatjes.length; i++) {
-    zwartWitPlaatjes[i].classList.add("toevoegen");
+    zwartWitPlaatjes[i].classList.remove("verwijderen");
+    buttonZwartWit.classList.add("zwartwitbutton");
   }
 }
+
+// Hier kijk ik of het plaatje de class niet bevat. Dan voeg ik de class (op de button en plaatje) eraan toe en anders haal ik het er af. Een toggle als het ware, dat kon alleen niet omdat de herstel button dan niet kon werken.
 
 function rood() {
-  //   for (i = 0; i < rodePlaatjes.length; i++) {
-  //     if (!rodePlaatjes[i].classList.contains("toevoegen")) {
-  //       rodePlaatjes[i].classList.add("toevoegen");
-  //       buttonRood.classList.add("kleurbutton");
-  //     } else {
-  //       rodePlaatjes[i].classList.remove("toevoegen");
-  //       buttonRood.classList.remove("kleurbutton");
-  //     }
-  //   }
   for (i = 0; i < rodePlaatjes.length; i++) {
-    rodePlaatjes[i].classList.toggle("toevoegen");
+    if (!rodePlaatjes[i].classList.contains("verwijderen")) {
+      rodePlaatjes[i].classList.add("verwijderen");
+      buttonRood.classList.remove("roodbutton");
+    } else {
+      rodePlaatjes[i].classList.remove("verwijderen");
+      buttonRood.classList.add("roodbutton");
+    }
   }
 }
 
 function geel() {
   for (i = 0; i < gelePlaatjes.length; i++) {
-    if (!gelePlaatjes[i].classList.contains("toevoegen")) {
-      gelePlaatjes[i].classList.add("toevoegen");
-      buttonGeel.classList.add("kleurbutton");
+    if (!gelePlaatjes[i].classList.contains("verwijderen")) {
+      gelePlaatjes[i].classList.add("verwijderen");
+      buttonGeel.classList.remove("geelbutton");
     } else {
-      gelePlaatjes[i].classList.remove("toevoegen");
-      buttonGeel.classList.remove("kleurbutton");
+      gelePlaatjes[i].classList.remove("verwijderen");
+      buttonGeel.classList.add("geelbutton");
     }
   }
 }
 
 function blauw() {
   for (i = 0; i < blauwePlaatjes.length; i++) {
-    if (!blauwePlaatjes[i].classList.contains("toevoegen")) {
-      blauwePlaatjes[i].classList.add("toevoegen");
-      buttonBlauw.classList.add("kleurbutton");
+    if (!blauwePlaatjes[i].classList.contains("verwijderen")) {
+      blauwePlaatjes[i].classList.add("verwijderen");
+      buttonBlauw.classList.remove("blauwbutton");
     } else {
-      blauwePlaatjes[i].classList.remove("toevoegen");
-      buttonBlauw.classList.remove("kleurbutton");
+      blauwePlaatjes[i].classList.remove("verwijderen");
+      buttonBlauw.classList.add("blauwbutton");
     }
   }
 }
 
 function zwartWit() {
   for (i = 0; i < zwartWitPlaatjes.length; i++) {
-    if (!zwartWitPlaatjes[i].classList.contains("toevoegen")) {
-      zwartWitPlaatjes[i].classList.add("toevoegen");
-      buttonZwartWit.classList.add("kleurbutton");
+    if (!zwartWitPlaatjes[i].classList.contains("verwijderen")) {
+      zwartWitPlaatjes[i].classList.add("verwijderen");
+      buttonZwartWit.classList.remove("zwartwitbutton");
     } else {
-      zwartWitPlaatjes[i].classList.remove("toevoegen");
-      buttonZwartWit.classList.remove("kleurbutton");
+      zwartWitPlaatjes[i].classList.remove("verwijderen");
+      buttonZwartWit.classList.add("zwartwitbutton");
     }
   }
 }
-
-/*
-
-function alles() {
-  for (i = 0; i < allePlaatjes.length; i++) {
-    if (!allePlaatjes[i].classList.contains("toevoegen")) {
-      allePlaatjes[i].classList.add("toevoegen");
-      buttonAlles.classList.add("kleurbutton");
-    } else {
-        allePlaatjes[i].classList.remove("toevoegen");
-      buttonAlles.classList.remove("kleurbutton");
-    }
-  }
-}
-
-function alles () {
-    allePlaatjes.forEach(function (plaatje) {
-        if (plaatje.classList.contains("toevoegen")) {
-            plaatje.classList.add("toevoegen");
-            buttonAlles.classList.add("kleurbutton");
-        } else {
-            plaatje.classList.remove("toevoegen");
-            buttonAlles.classList.toggle("kleurbutton");
-        }
-        plaatje.classList.add("toevoegen");
-    });
-}
-
-*/
-
-/*
-
-function rood() {
-  for (i = 0; i < rodePlaatjes.length; i++) {
-    rodePlaatjes[i].classList.toggle("toevoegen");
-  }
-  buttonRood.classList.toggle("kleurbutton");
-}
-
-function geel() {
-  for (i = 0; i < gelePlaatjes.length; i++) {
-    gelePlaatjes[i].classList.toggle("toevoegen");
-  }
-  buttonGeel.classList.toggle("kleurbutton");
-}
-
-function blauw() {
-  for (i = 0; i < blauwePlaatjes.length; i++) {
-    blauwePlaatjes[i].classList.toggle("toevoegen");
-  }
-  buttonBlauw.classList.toggle("kleurbutton");
-}
-
-function zwartWit() {
-  for (i = 0; i < zwartWitPlaatjes.length; i++) {
-    zwartWitPlaatjes[i].classList.toggle("toevoegen");
-  }
-  buttonZwartWit.classList.toggle("kleurbutton");
-}
-
-*/
 
 // ----- Eventlisteners
 
 // Hier zet ik eventlisteners op de buttons zodat de functies uitgevoerd kunnen worden.
 
-buttonAlles.addEventListener("click", alles);
+buttonAlles.addEventListener("click", herstel);
 buttonRood.addEventListener("click", rood);
 buttonGeel.addEventListener("click", geel);
 buttonBlauw.addEventListener("click", blauw);

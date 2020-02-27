@@ -1,3 +1,5 @@
+/* Algemeen */
+
 html {
   box-sizing: border-box;
   background: #121212;
@@ -14,12 +16,22 @@ body {
   padding: 1em;
 }
 
+/* Main */
+
+main {
+  transform: translateX(20%);
+  max-width: 80%;
+}
+
+/* Header */
+
 main header {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
   max-width: 100%;
   margin-bottom: 2em;
+  margin-left: 0.5em;
 }
 
 main header button {
@@ -27,17 +39,64 @@ main header button {
   color: white;
   border: none;
   padding: 1em 2em;
+  margin: 0.5em;
   border-radius: 0.5em;
   font-size: 12pt;
+  transition: ease-in 0.3s;
+  opacity: 0.7;
 }
 
+/* Header button states */
+
 main header button:hover {
-  background-color: darkgreen;
+  opacity: 1;
 }
+
+main header button:active {
+  transform: scale(0.9);
+}
+
+main header button:focus {
+  outline: none;
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
+#allesuit:hover {
+  border: 3px solid green;
+  background: #121212;
+}
+
+/* Header classList na toevoegen in js */
+
+.roodbutton {
+  border: 3px solid red;
+  background-color: #121212;
+  color: white;
+}
+
+.geelbutton {
+  border: 3px solid yellow;
+  background-color: #121212;
+  color: white;
+}
+
+.blauwbutton {
+  border: 3px solid blue;
+  background-color: #121212;
+  color: white
+}
+
+.zwartwitbutton {
+  border: 3px solid white;
+  background-color: #121212;
+  color: white
+}
+
+/* Article */
 
 main article {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
 }
 
@@ -45,44 +104,28 @@ main article div {
   margin: 1em;
   height: 200px;
   width: 200px;
+  border-radius: 15px;
+  background-color: #121212;
 }
 
-.toevoegen {
+.rood {
+  border: 5px solid red;
+}
+
+.blauw {
+  border: 5px solid blue;
+}
+
+.zwart_wit {
+  border: 5px solid white;
+}
+
+.geel {
+  border: 5px solid yellow;
+}
+
+/* Article classList na toevoegen in js */
+
+.verwijderen {
   display: none;
-}
-
-.kleurbutton {
-  background-color: green;
-}
-
-main article div:nth-child(1) {
-  border: 5px solid red;
-}
-
-main article div:nth-child(2) {
-  border: 5px solid blue;
-}
-
-main article div:nth-child(3) {
-  border: 5px solid white;
-}
-
-main article div:nth-child(4) {
-  border: 5px solid yellow;
-}
-
-main article div:nth-child(5) {
-  border: 5px solid yellow;
-}
-
-main article div:nth-child(6) {
-  border: 5px solid red;
-}
-
-main article div:nth-child(7) {
-  border: 5px solid blue;
-}
-
-main article div:nth-child(8) {
-  border: 5px solid white;
 }
