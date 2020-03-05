@@ -21,7 +21,7 @@ var fotoImg = document.querySelector("img");
 var huidigeFotoNrSpan = document.querySelector("#huidigeFotoNr");
 var laatsteFotoNrSpan = document.querySelector("#laatsteFotoNr");
 var huidigeFotoNr = 1;
-fotoImg.src = "_img/" + fotos[huidigeFotoNr];
+fotoImg.src = "img/" + fotos[huidigeFotoNr];
 
 var buttonTerug = document.querySelector("#terug");
 var buttonVooruit = document.querySelector("#vooruit");
@@ -52,7 +52,7 @@ function vooruit() {
 }
 
 function verversFoto() {
-  fotoImg.src = "_img/" + fotos[huidigeFotoNr];
+  fotoImg.src = "img/" + fotos[huidigeFotoNr];
   huidigeFotoNrSpan.textContent = huidigeFotoNr;
 }
 
