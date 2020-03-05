@@ -1,0 +1,53 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 4em;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main article img {
+  max-width: 60vw;
+  height: 50vh;
+}
+
+main button {
+  background-color: yellow;
+  border: none;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: black;
+  transition: ease-in-out 0.2s;
+}
+
+main button:hover {
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
+main button:active {
+  opacity: 0.8;
+}
+
+main button:focus {
+  outline: none;
+}
+
+main article p {
+  text-align: center;
+  font-size: 3em;
+}
