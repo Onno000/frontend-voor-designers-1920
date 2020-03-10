@@ -1,6 +1,4 @@
-# Frontend voor Designers
-
-## Ids Fijen
+# Frontend voor Designers - Ids Fijen
 
 ![alt text](./img/matrix.jpg "Frontend voor Design Splash")
 
