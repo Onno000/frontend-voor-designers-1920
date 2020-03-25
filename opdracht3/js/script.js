@@ -13,11 +13,28 @@ fetch(
 )
   .then(response => response.json())
   .then(jsonData => {
-    // Do something with response data.
     console.log(jsonData);
   });
 */
 
+// Deze (2) hieronder werken niet...helaas
+
+/*
+fetch("https://api.windy.com/api/point-forecast/v2", {
+  lat: 52.31,
+  lon: 5.559,
+  model: "IconEU",
+  parameters: ["wind", "windGust"],
+  levels: ["surface", "800h", "300h"],
+  key: "q6OYBVRfBt4Dyv0OobLIED1yq0iV5hdu"
+})
+  .then(response => response.json())
+  .then(jsonData => {
+    console.log(jsonData);
+  });
+*/
+
+/*
 // het verzoek om de data te laden
 
 let requestURL = "https://api.windy.com/api/point-forecast/v2";
@@ -48,3 +65,4 @@ request.onload = function() {
   const windGegevens = request.response;
   console.log(windGegevens);
 };
+*/
