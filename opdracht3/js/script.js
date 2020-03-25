@@ -34,7 +34,7 @@ fetch("https://api.windy.com/api/point-forecast/v2", {
   });
 */
 
-/*
+
 // het verzoek om de data te laden
 
 let requestURL = "https://api.windy.com/api/point-forecast/v2";
@@ -65,4 +65,4 @@ request.onload = function() {
   const windGegevens = request.response;
   console.log(windGegevens);
 };
-*/
+
