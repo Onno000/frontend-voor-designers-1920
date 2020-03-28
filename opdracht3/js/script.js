@@ -5,7 +5,7 @@ var main = document.querySelector("main");
 // Brouwersdam
 
 let requestURLBrouwersdam =
-  "http://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=51.766667,3.86";
+  "https://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=51.766667,3.86";
 let BrouwersdamData = new XMLHttpRequest();
 BrouwersdamData.open("GET", requestURLBrouwersdam);
 BrouwersdamData.responseType = "json";
@@ -106,7 +106,7 @@ function windB(weerBrouwersdam) {
 // Strand Horst
 
 let requestURLStrandHorst =
-  "http://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=52.3102778,5.5591667";
+  "https://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=52.3102778,5.5591667";
 let strandHorstData = new XMLHttpRequest();
 strandHorstData.open("GET", requestURLStrandHorst);
 strandHorstData.responseType = "json";
@@ -207,7 +207,7 @@ function windS(weerStrandHorst) {
 // Vinkeveen
 
 let requestURLVinkeveen =
-  "http://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=52.2150916,4.9348068";
+  "https://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=52.2150916,4.9348068";
 let vinkeveenData = new XMLHttpRequest();
 vinkeveenData.open("GET", requestURLVinkeveen);
 vinkeveenData.responseType = "json";
