@@ -1,0 +1,52 @@
+/* Fonts */
+
+@font-face {
+  font-family: "BurbankBig";
+  src: url(./fonts/BurbankBigCondensed-Bold.otf);
+}
+
+/* Algemeen */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+p {
+  font-family: "BurbankBig", sans-serif;
+  color: #313131;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+main section {
+  height: 100vh;
+  padding: 10px;
+}
+
+main section:nth-child(1) {
+  background-color: #36bb87;
+}
+
+main section:nth-child(2) {
+  background-color: #2cd21e;
+}
+
+main section:nth-child(3) {
+  background-color: #2de71a;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
