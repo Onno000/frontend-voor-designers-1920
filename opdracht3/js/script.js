@@ -1,3 +1,5 @@
+/*
+
 // Weerdata
 
 function setupWindData(data) {
@@ -20,7 +22,6 @@ function getWeerData(requesturl) {
 // Windrichting bepalen
 
 function wind(windRichting) {
-  var wareWindVandaag;
   if (windRichting == "N") {
     var wareWindVandaag = 16;
   } else if (windRichting == "NNO") {
@@ -54,11 +55,61 @@ function wind(windRichting) {
   } else if (windRichting == "NNW") {
     var wareWindVandaag = 1;
   }
+
   console.log(wareWindVandaag);
 }
+
+// Windrichting
 
 // Weer ophalen
 
 getWeerData(
   "https://weerlive.nl/api/json-data-10min.php?key=b469d45a6f&locatie=51.766667,3.86"
 );
+
+*/
+
+var buttonEen = document.querySelector("button:nth-of-type(1)");
+var buttonTwee = document.querySelector("button:nth-of-type(2)");
+var buttonDrie = document.querySelector("button:nth-of-type(3)");
+
+var articleEen = document.querySelector("article:nth-of-type(1)");
+var articleTwee = document.querySelector("article:nth-of-type(2)");
+var articleDrie = document.querySelector("article:nth-of-type(3)");
+
+function deselecteren() {
+  buttonEen.classList.remove("geselecteerd");
+  buttonTwee.classList.remove("geselecteerd");
+  buttonDrie.classList.remove("geselecteerd");
+  articleEen.classList.remove("beneden");
+  articleTwee.classList.remove("beneden");
+  articleDrie.classList.remove("beneden");
+  articleEen.classList.remove("boven");
+  articleTwee.classList.remove("boven");
+  articleDrie.classList.remove("boven");
+}
+
+function selecterenEen() {
+  deselecteren();
+  buttonEen.classList.toggle("geselecteerd");
+  articleTwee.classList.add("beneden");
+  articleDrie.classList.add("beneden");
+}
+
+function selecterenTwee() {
+  deselecteren();
+  buttonTwee.classList.toggle("geselecteerd");
+  articleEen.classList.add("boven");
+  articleDrie.classList.add("beneden");
+}
+
+function selecterenDrie() {
+  deselecteren();
+  buttonDrie.classList.toggle("geselecteerd");
+  articleEen.classList.add("boven");
+  articleTwee.classList.add("boven");
+}
+
+buttonEen.addEventListener("click", selecterenEen);
+buttonTwee.addEventListener("click", selecterenTwee);
+buttonDrie.addEventListener("click", selecterenDrie);
