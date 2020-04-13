@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Junar";
+  src: url(./fonts/junar.ttf);
+}
+
+/* Algemeen */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("./images/strand.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+iframe {
+  height: 300px;
+  width: 500px;
+  /* height: 150px;
+  width: 250px; */
+  border: none;
+  border-radius: 30px;
+}
+
+/* Header  */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+header h1 {
+  color: white;
+  font-size: 60pt;
+  text-transform: uppercase;
+}
+
+header h1:first-of-type {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+  font-size: 100pt;
+}
+
+header h1,
+h2 {
+  font-family: "Junar", sans-serif;
+  margin: 50px;
+  transition: ease-out 0.3s;
+}
+
+h2 {
+  font-size: 30pt;
+  color: white;
+  text-transform: uppercase;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+header li {
+  margin: 0 50px;
+}
+
+/* Main */
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 68.5%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  transition: ease-out 0.3s;
+}
+
+main article {
+  display: flex;
+  flex-direction: row;
+  max-width: 50vw;
+  transition: ease-out 0.3s;
+}
+
+/* ----- Windsurfen */
+
+main article:first-of-type {
+  font-family: "Caveat", cursive;
+  color: white;
+  font-size: 20pt;
+  margin-right: 10vw;
+}
+
+main article:first-of-type h3 {
+  font-size: 40pt;
+}
+
+main article:first-of-type section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 300px;
+  padding: 0px 30px;
+  margin: 0 10px;
+  border-radius: 30px;
+}
+
+main article:first-of-type section.besteWind {
+  background-color: #f9c41e;
+}
+
+main article:first-of-type section p,
+main article:first-of-type section h3 {
+  margin: 0 10px;
+}
+
+/* ----- Film */
+
+main article:last-of-type section {
+  position: relative;
+  margin: 0px 10px;
+}
+
+main article:last-of-type h3 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  text-align: center;
+  transition: ease-out 0.3s;
+}
+
+main article:last-of-type p {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 80%;
+  opacity: 1;
+  transition: ease-out 0.3s;
+}
+
+main article:last-of-type section:hover p,
+main article:last-of-type section:hover h3 {
+  opacity: 0;
+  transition: ease-out 0.3s;
+}
+
+main article:last-of-type {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 12pt;
+}
+
+main article:last-of-type h3 {
+  font-family: "Junar", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Footer */
+
+footer {
+  position: fixed;
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 5%;
+  margin: 10px;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 50px;
+  margin: 0 38vw;
+  transition: ease-out 1s;
+}
+
+footer a:hover img {
+  width: 45px;
+  filter: brightness(3);
+}
+
+footer button {
+  padding: 5px;
+  border-radius: 50%;
+  margin: 10px;
+  border: none;
+  transition: ease-out 0.3s;
+}
+
+footer button:hover {
+  padding: 0.5%;
+}
+
+footer button.geselecteerd {
+  padding: 10px;
+  background-color: #f9c41e;
+}
+
+/* Transitie */
+
+main.verschuiven {
+  left: 29%;
+}
+
+.vervagen {
+  opacity: 0.2;
+}
