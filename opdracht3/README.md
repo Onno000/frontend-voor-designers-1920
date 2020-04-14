@@ -30,3 +30,13 @@ Werk daarna je ontwerp uit in HTML, CSS en JavaScript.
 - Met behulp van [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) of [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) kan een [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) file worden geladen. Daarna kun je de HTML elementen aanmaken, de juiste content koppelen en aan de DOM toevoegen.
 - Hier staat een [tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) voor het laden van JSON data en het aanmaken van HTMl elementen.
 - Bij het laden van externe data kan de server verschillende [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) doorgeven, die kun je gebruiken om feedback te tonen.
+
+## Het idee
+Het idee is een platform wat laat zien aan surfers of het hard genoeg waait. Zo niet dan wordt hen een filmtrailer aangeboden. Op die manier hoeft de surfer zich niet te vervelen. Iedere keer dat de surfer op de website wordt hem/haar een nieuwe trailer aangeboden. Mocht het nou wel waaien dan wordt dat natuurlijk als eerst getoond. Hierbij zijn drie spots ingeladen waar de windkracht en de afwijking van de ideale windrichting wordt aangegeven. Zo weten de surfers direct waar zij naar toe moeten gaan.
+
+## Wat nog niet gelukt is
+Door de vertraging die dit vak heeft opgelopen valt mijn stage tegelijkertijd met de deadline van Front-end. Ik had echter wel nog een paar dingen willen fixen, helaas heb ik hier op dit moment geen tijd meer voor.
+
+- De autoplay op het moment dat het niet waait, ondanks de hulp op discord is dit mij nog niet gelukt. Ik denk dat het te maken heeft met dat een film gemuted moet zijn omdat het anders op een advertentie lijkt en dat is verboden volgens mij.
+- Het gekleurde vak om de spot met de beste combinatie tussen harde wind en afwijking van de ideale windrichting. Op dit moment staat hij altijd op de laatste section, ik heb een beetje valsgespeeld voor het idee. Het idee was om hier een nieuwe berekening voor te maken maar doordat je de gegevens drie keer door dezelfde functie stuurt is het lastig om dan weer de juiste eruit te pakken. Hier liep ik een beetje bij vast.
+- Het toewijzen van de afwijking aan de section en niet aan het artikel, hiervoor geldt hetzelfde probleem als hierboven.

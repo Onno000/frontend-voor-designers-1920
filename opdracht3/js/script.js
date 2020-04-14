@@ -2,8 +2,8 @@
 
 // ----- Header
 
-var surfTitel = document.querySelector("header>h1:first-of-type");
-var filmTitel = document.querySelector("header>h1:last-of-type");
+var surfTitel = document.querySelector("header h1:first-of-type");
+var filmTitel = document.querySelector("header h1:last-of-type");
 
 // ----- Main
 
@@ -15,7 +15,6 @@ var artikelTwee = document.querySelector("article:nth-of-type(2)");
 
 var surfNav = document.querySelector("button:first-of-type");
 var filmNav = document.querySelector("button:last-of-type");
-
 var surfHeaderNav = document.querySelector("header>a:first-of-type");
 var filmHeaderNav = document.querySelector("header>a:last-of-type");
 
@@ -25,22 +24,16 @@ function setupWindData(weerData) {
   var sectionWind = document.createElement("section");
   var plaatsP = document.createElement("p");
   var windkrachtH = document.createElement("h3");
-
   plaatsP.textContent = weerData.liveweer[0].plaats;
-  windkrachtH.textContent = weerData.liveweer[0].windk + " kt";
-
+  windkrachtH.textContent = weerData.liveweer[0].windk + "kt";
   artikelEen.appendChild(sectionWind);
   sectionWind.appendChild(plaatsP);
   sectionWind.appendChild(windkrachtH);
-
-  // Geen idee of dit werkt
-  //
-  //
-  //
-  //
-
-  console.log(Math.max(weerData.liveweer[0].windk));
-
+  if (weerData.liveweer[0].windk < 14) {
+    transitie();
+    var uitlegTekst = document.querySelector("header>p");
+    uitlegTekst.textContent = "Het waait niet kijk maar een filmpje!";
+  }
   windAfwijking(weerData.liveweer[0].plaats, weerData.liveweer[0].windr);
 }
 
@@ -80,7 +73,6 @@ function windAfwijking(plaats, windrichting) {
   } else if (windrichting == "NNW") {
     var omgerekendeWindrichting = 1;
   }
-
   if (plaats == "Vinkeveen") {
     var idealeWind = 16;
   } else if (plaats == "Scharendijke") {
@@ -88,19 +80,14 @@ function windAfwijking(plaats, windrichting) {
   } else if (plaats == "Horst") {
     var idealeWind = 10;
   }
-
   var afstand = omgerekendeWindrichting - idealeWind;
-
   if (afstand > 8) {
     var graden = (idealeWind + 16 - omgerekendeWindrichting) * -22.5;
   } else {
     var graden = afstand * 22.5;
   }
-
   var afwijking = document.createElement("p");
-
-  afwijking.textContent = graden;
-
+  afwijking.textContent = graden + "deg deviation";
   artikelEen.appendChild(afwijking);
 }
 
@@ -110,8 +97,7 @@ function weerData(lat, ln) {
   var requestWeer = new XMLHttpRequest();
   requestWeer.onload = function () {
     var weerData = requestWeer.response;
-    //setupWindData(weerData);
-    //console.log(weerData);
+    setupWindData(weerData);
   };
   requestWeer.open(
     "GET",
@@ -151,21 +137,18 @@ function setupFilmData(filmData) {
   var min = 0;
   var max = 4;
   var i = Math.floor(Math.random() * (max - min + 1)) + min;
-
   var sectionFilm = document.createElement("section");
   var filmTitel = document.createElement("h3");
   var video = document.createElement("iframe");
+  video.setAttribute("controls", "true");
+  video.setAttribute("autoplay", "true");
   video.setAttribute("src", filmData[i].trailer);
-  video.setAttribute("allowautoplay", false);
-
-  // video.setAttribute("nocontrol");
-
+  video.setAttribute("width", "100%");
+  video.setAttribute("muted", "true");
   var plot = document.createElement("p");
-
   video.src = filmData[i].trailer;
   filmTitel.textContent = filmData[i].title;
   plot.textContent = filmData[i].simple_plot;
-
   artikelTwee.appendChild(sectionFilm);
   sectionFilm.appendChild(video);
   sectionFilm.appendChild(filmTitel);
@@ -210,10 +193,8 @@ function transitie() {
 // Bij het laden van de pagina alle functies oproepen
 
 window.addEventListener("load", paginaLaden);
-
 surfNav.addEventListener("click", transitie);
 filmNav.addEventListener("click", transitie);
-
 document.addEventListener("keydown", function () {
   if (event.keyCode == 39) {
     transitie();
